@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+body {
+  background-color: #f7f5f2;
+  height: 100%;
+  font-family: "Inter";
+  font-size: 20px;
+}
+
+header {
+  background-color: #3c843e;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-right: 30px;
+}
+
+header nav a {
+  border-radius: 13px;
+  height: 30px;
+  background-color: #fff;
+  padding: 0 20px;
+  line-height: 30px;
+  text-decoration: none;
+}
+
+header nav img {
+  height: 26px;
+  margin-top: 2px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: black;
+}
+
+header nav a:has(img) {
+  padding: 0 15px;
+}
+
+header img.logo {
+  height: 80px;
+}
+.hero {
+  background-color: white;
+  padding: 70px 30px;
+  border-radius: 30px;
+}
+
+.hero h1 {
+  font-weight: normal;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.hero button.cta {
+  padding: 18px 45px;
+  background-color: #f7f5f2;
+  border-radius: 15px;
+  border: none;
+  font-size: 18px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+footer {
+  background-color: #3c843e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: Fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-family: "Inria Serif";
+  padding-top: 30px;
+}
+
+.copyright {
+  background-color: #2c5f2d;
+  width: 100%;
+  text-align: center;
+  padding: 7px 0;
+}
+
+footer nav {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+footer div.socials {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+footer div.socials a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer div.socials a img {
+  height: 30px;
+}
+
+main {
+  padding: 50px 30px;
+}
+
+header label[for="hamburgerMenu"],
+header input#hamburgerMenu {
+  display: none;
+}
+
+@media screen and (max-width: 660px) {
+  header label[for="hamburgerMenu"] {
+    display: block;
+  }
+
+  header nav {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    background-color: #8de490;
+    height: 100%;
+    flex-direction: column;
+    padding: 40px 20px;
+    margin-right: 0;
+    width: 250px;
+    z-index: 1000;
+    height: calc(100% - 100px);
+    translate: 250px 0;
+    transition: translate 0.3s;
+  }
+
+  header {
+    padding-right: 40px;
+  }
+
+  header:has(input#hamburgerMenu:checked) nav {
+    translate: 0;
+  }
+}
