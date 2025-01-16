@@ -1,0 +1,23 @@
+div.products {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, 250px);
+  width: 80vw;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+div.products > div.product {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+div.products > div.product img {
+  width: 100%;
+}
+
+div.products > div.product > p {
+  display: flex;
+  justify-content: space-between;
+}

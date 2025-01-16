@@ -6,6 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: inherit;
+  font-size: inherit;
 }
 
 body {
@@ -132,6 +133,7 @@ footer div.socials a img {
 
 main {
   padding: 50px 30px;
+  padding-bottom: 220px;
 }
 
 header label[for="hamburgerMenu"],
